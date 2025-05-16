@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\6t a\\Programacion II\\tp1\\tp1\\tp1.vbproj": {}
+    "C:\\Users\\salan\\Source\\Repos\\tp1\\tp1\\tp1.vbproj": {}
   },
   "projects": {
-    "E:\\6t a\\Programacion II\\tp1\\tp1\\tp1.vbproj": {
+    "C:\\Users\\salan\\Source\\Repos\\tp1\\tp1\\tp1.vbproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\6t a\\Programacion II\\tp1\\tp1\\tp1.vbproj",
+        "projectUniqueName": "C:\\Users\\salan\\Source\\Repos\\tp1\\tp1\\tp1.vbproj",
         "projectName": "tp1",
-        "projectPath": "E:\\6t a\\Programacion II\\tp1\\tp1\\tp1.vbproj",
+        "projectPath": "C:\\Users\\salan\\Source\\Repos\\tp1\\tp1\\tp1.vbproj",
         "packagesPath": "C:\\Users\\salan\\.nuget\\packages\\",
-        "outputPath": "E:\\6t a\\Programacion II\\tp1\\tp1\\obj\\",
+        "outputPath": "C:\\Users\\salan\\Source\\Repos\\tp1\\tp1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
