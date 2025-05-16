@@ -1,5 +1,12 @@
 ﻿Public Class Form1
+
+    Public Sub cambiarpanel()
+        Dim estado As Boolean = PanelSideMenu.Visible
+        PanelSideMenu.Visible = Not estado
+    End Sub
+
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        cambiarpanel()
         hideSubmenu()
         Label1.BackColor = Color.DarkOrange
         Label1.Visible = True
@@ -154,5 +161,49 @@
         Label1.Visible = False
         Timer1.Stop()
     End Sub
+
+    Private Sub Login_Click(sender As Object, e As EventArgs) Handles Login.Click
+        Dim f9 As New Form9()
+        f9.FormPadre = Me
+        openform(f9)
+        Login.Visible = False
+        Register.Visible = False
+    End Sub
+
+    Private Sub Register_Click(sender As Object, e As EventArgs) Handles Register.Click
+        Dim f10 As New Form10()
+        f10.FormPadre = Me
+        openform(f10)
+        Login.Visible = False
+        Register.Visible = False
+    End Sub
+
+    Private Sub PictureBox2_Paint(sender As Object, e As PaintEventArgs) Handles PictureBox2.Paint
+        Dim bordeColor As Color = Color.FromArgb(228, 135, 54)
+        Dim grosor As Integer = 2
+        Dim rect As New Rectangle(0, 0, PictureBox2.Width - 1, PictureBox2.Height - 1)
+        Using lapiz As New Pen(bordeColor, grosor)
+            e.Graphics.DrawRectangle(lapiz, rect)
+        End Using
+        GenerarLogoConSombra("Logo").Save("logo.png") ' Guardar el logo generado como archivo
+    End Sub
+
+    Private Function GenerarLogoConSombra(texto As String) As Image
+        Dim bmp As New Bitmap(300, 100) ' Cambiá tamaño si hace falta
+        Using g As Graphics = Graphics.FromImage(bmp)
+            g.Clear(Color.FromArgb(64, 64, 64)) ' Fondo gris oscuro
+
+            Dim fuente As New Font("Segoe UI", 24, FontStyle.Bold)
+            Dim sombraColor As Color = Color.Black
+            Dim textoColor As Color = Color.FromArgb(228, 135, 54)
+
+            ' Sombra (dibujá el texto corrido un poco)
+            g.DrawString(texto, fuente, New SolidBrush(sombraColor), 5, 5)
+
+            ' Texto principal encima
+            g.DrawString(texto, fuente, New SolidBrush(textoColor), 3, 3)
+        End Using
+        Return bmp
+    End Function
 
 End Class

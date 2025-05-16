@@ -23,7 +23,6 @@ Partial Class Form1
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         PanelSideMenu = New Panel()
         Label2 = New Label()
-        CLOSEXIT = New Button()
         PanelExpo = New Panel()
         BtnPDFExport = New Button()
         Exel = New Button()
@@ -39,6 +38,7 @@ Partial Class Form1
         Administración = New Button()
         PanelLogo = New Panel()
         PictureBox1 = New PictureBox()
+        CLOSEXIT = New Button()
         LabelHora = New Label()
         LabelFe = New Label()
         HoraFecha = New Timer(components)
@@ -47,6 +47,8 @@ Partial Class Form1
         Label1 = New Label()
         PictureBox2 = New PictureBox()
         Panel3 = New Panel()
+        Register = New Button()
+        Login = New Button()
         maximizer = New PictureBox()
         Panel4 = New Panel()
         Panel5 = New Panel()
@@ -75,7 +77,6 @@ Partial Class Form1
         PanelSideMenu.AutoScroll = True
         PanelSideMenu.BackColor = Color.FromArgb(CByte(52), CByte(51), CByte(52))
         PanelSideMenu.Controls.Add(Label2)
-        PanelSideMenu.Controls.Add(CLOSEXIT)
         PanelSideMenu.Controls.Add(PanelExpo)
         PanelSideMenu.Controls.Add(Expo)
         PanelSideMenu.Controls.Add(PanelVenta)
@@ -84,9 +85,9 @@ Partial Class Form1
         PanelSideMenu.Controls.Add(Administración)
         PanelSideMenu.Controls.Add(PanelLogo)
         PanelSideMenu.Dock = DockStyle.Left
-        PanelSideMenu.Location = New Point(0, 0)
+        PanelSideMenu.Location = New Point(0, 21)
         PanelSideMenu.Name = "PanelSideMenu"
-        PanelSideMenu.Size = New Size(250, 665)
+        PanelSideMenu.Size = New Size(250, 599)
         PanelSideMenu.TabIndex = 0
         ' 
         ' Label2
@@ -94,26 +95,11 @@ Partial Class Form1
         Label2.AutoSize = True
         Label2.Dock = DockStyle.Bottom
         Label2.ForeColor = Color.FromArgb(CByte(228), CByte(135), CByte(54))
-        Label2.Location = New Point(0, 605)
+        Label2.Location = New Point(0, 584)
         Label2.Name = "Label2"
         Label2.Size = New Size(213, 15)
         Label2.TabIndex = 6
         Label2.Text = "Copyright by Augusto Fontana V 1.0.25"
-        ' 
-        ' CLOSEXIT
-        ' 
-        CLOSEXIT.BackColor = Color.FromArgb(CByte(52), CByte(51), CByte(52))
-        CLOSEXIT.Dock = DockStyle.Bottom
-        CLOSEXIT.FlatStyle = FlatStyle.Flat
-        CLOSEXIT.ForeColor = Color.FromArgb(CByte(228), CByte(135), CByte(54))
-        CLOSEXIT.Location = New Point(0, 620)
-        CLOSEXIT.Name = "CLOSEXIT"
-        CLOSEXIT.Padding = New Padding(10, 0, 0, 0)
-        CLOSEXIT.Size = New Size(250, 45)
-        CLOSEXIT.TabIndex = 6
-        CLOSEXIT.Text = "Salir / cerrar sistema"
-        CLOSEXIT.TextAlign = ContentAlignment.MiddleLeft
-        CLOSEXIT.UseVisualStyleBackColor = False
         ' 
         ' PanelExpo
         ' 
@@ -312,12 +298,27 @@ Partial Class Form1
         ' PictureBox1
         ' 
         PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
-        PictureBox1.Location = New Point(-10, -78)
+        PictureBox1.Location = New Point(-10, -83)
         PictureBox1.Name = "PictureBox1"
         PictureBox1.Size = New Size(276, 296)
         PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox1.TabIndex = 1
         PictureBox1.TabStop = False
+        ' 
+        ' CLOSEXIT
+        ' 
+        CLOSEXIT.BackColor = Color.FromArgb(CByte(52), CByte(51), CByte(52))
+        CLOSEXIT.Dock = DockStyle.Left
+        CLOSEXIT.FlatStyle = FlatStyle.Flat
+        CLOSEXIT.ForeColor = Color.FromArgb(CByte(228), CByte(135), CByte(54))
+        CLOSEXIT.Location = New Point(0, 0)
+        CLOSEXIT.Name = "CLOSEXIT"
+        CLOSEXIT.Padding = New Padding(10, 0, 0, 0)
+        CLOSEXIT.Size = New Size(250, 45)
+        CLOSEXIT.TabIndex = 6
+        CLOSEXIT.Text = "Salir / cerrar sistema"
+        CLOSEXIT.TextAlign = ContentAlignment.MiddleLeft
+        CLOSEXIT.UseVisualStyleBackColor = False
         ' 
         ' LabelHora
         ' 
@@ -350,7 +351,7 @@ Partial Class Form1
         Panel1.Controls.Add(LabelFe)
         Panel1.Controls.Add(LabelHora)
         Panel1.Dock = DockStyle.Right
-        Panel1.Location = New Point(1016, 0)
+        Panel1.Location = New Point(1266, 0)
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(104, 45)
         Panel1.TabIndex = 3
@@ -359,11 +360,12 @@ Partial Class Form1
         ' 
         Panel2.BackColor = Color.FromArgb(CByte(52), CByte(51), CByte(52))
         Panel2.Controls.Add(Label1)
+        Panel2.Controls.Add(CLOSEXIT)
         Panel2.Controls.Add(Panel1)
         Panel2.Dock = DockStyle.Bottom
-        Panel2.Location = New Point(250, 620)
+        Panel2.Location = New Point(0, 620)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(1120, 45)
+        Panel2.Size = New Size(1370, 45)
         Panel2.TabIndex = 4
         ' 
         ' Label1
@@ -371,7 +373,7 @@ Partial Class Form1
         Label1.AutoSize = True
         Label1.Font = New Font("Segoe UI", 14F)
         Label1.ForeColor = Color.Black
-        Label1.Location = New Point(6, 11)
+        Label1.Location = New Point(256, 11)
         Label1.Name = "Label1"
         Label1.Size = New Size(327, 25)
         Label1.TabIndex = 4
@@ -381,21 +383,49 @@ Partial Class Form1
         ' 
         PictureBox2.Anchor = AnchorStyles.None
         PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), Image)
-        PictureBox2.Location = New Point(410, 149)
+        PictureBox2.Location = New Point(410, 141)
         PictureBox2.Name = "PictureBox2"
-        PictureBox2.Size = New Size(300, 200)
+        PictureBox2.Size = New Size(300, 300)
         PictureBox2.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox2.TabIndex = 5
         PictureBox2.TabStop = False
         ' 
         ' Panel3
         ' 
+        Panel3.Controls.Add(Register)
+        Panel3.Controls.Add(Login)
         Panel3.Controls.Add(PictureBox2)
         Panel3.Dock = DockStyle.Fill
         Panel3.Location = New Point(250, 21)
         Panel3.Name = "Panel3"
         Panel3.Size = New Size(1120, 599)
         Panel3.TabIndex = 5
+        ' 
+        ' Register
+        ' 
+        Register.Anchor = AnchorStyles.None
+        Register.FlatStyle = FlatStyle.Flat
+        Register.Font = New Font("Segoe UI", 12F)
+        Register.ForeColor = Color.FromArgb(CByte(228), CByte(135), CByte(54))
+        Register.Location = New Point(624, 463)
+        Register.Name = "Register"
+        Register.Size = New Size(86, 33)
+        Register.TabIndex = 7
+        Register.Text = "Register"
+        Register.UseVisualStyleBackColor = True
+        ' 
+        ' Login
+        ' 
+        Login.Anchor = AnchorStyles.None
+        Login.FlatStyle = FlatStyle.Flat
+        Login.Font = New Font("Segoe UI", 12F)
+        Login.ForeColor = Color.FromArgb(CByte(228), CByte(135), CByte(54))
+        Login.Location = New Point(410, 463)
+        Login.Name = "Login"
+        Login.Size = New Size(86, 33)
+        Login.TabIndex = 6
+        Login.Text = "Login"
+        Login.UseVisualStyleBackColor = True
         ' 
         ' maximizer
         ' 
@@ -412,9 +442,9 @@ Partial Class Form1
         Panel4.BackColor = Color.FromArgb(CByte(52), CByte(51), CByte(52))
         Panel4.Controls.Add(Panel5)
         Panel4.Dock = DockStyle.Top
-        Panel4.Location = New Point(250, 0)
+        Panel4.Location = New Point(0, 0)
         Panel4.Name = "Panel4"
-        Panel4.Size = New Size(1120, 21)
+        Panel4.Size = New Size(1370, 21)
         Panel4.TabIndex = 6
         ' 
         ' Panel5
@@ -423,7 +453,7 @@ Partial Class Form1
         Panel5.Controls.Add(maximizer)
         Panel5.Controls.Add(mizimizer)
         Panel5.Dock = DockStyle.Right
-        Panel5.Location = New Point(1028, 0)
+        Panel5.Location = New Point(1278, 0)
         Panel5.Name = "Panel5"
         Panel5.Size = New Size(92, 21)
         Panel5.TabIndex = 3
@@ -459,9 +489,9 @@ Partial Class Form1
         BackColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         ClientSize = New Size(1370, 665)
         Controls.Add(Panel3)
+        Controls.Add(PanelSideMenu)
         Controls.Add(Panel4)
         Controls.Add(Panel2)
-        Controls.Add(PanelSideMenu)
         FormBorderStyle = FormBorderStyle.None
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Name = "Form1"
@@ -521,4 +551,6 @@ Partial Class Form1
     Friend WithEvents Label1 As Label
     Friend WithEvents Timer1 As Timer
     Friend WithEvents Label2 As Label
+    Friend WithEvents Register As Button
+    Friend WithEvents Login As Button
 End Class

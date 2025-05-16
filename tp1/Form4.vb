@@ -17,6 +17,4 @@
     Private Sub ClosePIC_MouseLeave(sender As Object, e As EventArgs) Handles ClosePIC.MouseLeave
         ClosePIC.BackColor = Color.FromArgb(64, 64, 64) ' O volvés al color que tenías
     End Sub
-
-
 End Class

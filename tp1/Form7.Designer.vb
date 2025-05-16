@@ -97,9 +97,9 @@ Partial Class Form7
         Label3.ForeColor = Color.FromArgb(CByte(228), CByte(135), CByte(54))
         Label3.Location = New Point(468, -2)
         Label3.Name = "Label3"
-        Label3.Size = New Size(244, 37)
+        Label3.Size = New Size(259, 37)
         Label3.TabIndex = 42
-        Label3.Text = "Exportacion a EXEL"
+        Label3.Text = "Exportacion a EXCEL"
         ' 
         ' Form7
         ' 
